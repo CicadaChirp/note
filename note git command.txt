@@ -11,3 +11,11 @@ mkdir xxxx
 cd xxxx
 查看当前文件夹名
 pwd
+
+在当前文件夹创建版本库
+git init
+将文件添加到仓库，可多次添加多个文件，在一次性提交
+git add "xxxx"
+将文件提交到仓库，并问本次操作命名
+git commit -m "xxxx"
+
