@@ -36,6 +36,7 @@ git reflog --pretty=oneline
 撤销文件在工作区的修改
 git checkout -- file
 
+try
 
 
 所以，git add命令实际上就是把要提交的所有修改放到暂存区（Stage），
