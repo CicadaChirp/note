@@ -19,3 +19,10 @@ git add "xxxx"
 将文件提交到仓库，并问本次操作命名
 git commit -m "xxxx"
 
+查看版本库状态
+git status
+查看版本库修改
+git diff
+
+尝试着
+
