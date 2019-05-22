@@ -39,10 +39,29 @@ git checkout -- file
 从版本库中删除文件，之后接git commit
 git rm
 
+从远程主机克隆版本库
+git clone <版本库网址>
+git clone <版本库网址> <本地目录名>	指定不同的目录名
+git clone -o jQuery https://github.com/jquery/jquery.git 上面命令表示，克隆的时候，指定远程主机叫做jQuery。
 连接到远程库，github库
 git remote add origin git@github.com:michaelliao/learngit.git
+git remote -v 用于查看远程主机网址
+git remote show <主机名>	查看主机信息
+git remote rm <主机名>	用于删除远程主机
+git remote rename <原主机名> <新主机名>	用于远程主机改名  
+将远程主机更新取回本地
+git fetch <远程主机名>
+git fetch <远程主机名> <分支名>
+查看远程分支
+git branch -r
+git branch -a	查看所有分支
+取回远程主机某个分支的更新，再与本地的指定分支合并
+git pull <远程主机名> <远程分支名>:<本地分支名>
+git pull origin next:master	
+
 将本地库内容托送到远程库
 git push -u origin master
+
 
 
 
@@ -81,3 +100,12 @@ Your identification has been saved in /Users/your_user_directory/.ssh/id_rsa. Yo
 
 推送过一次之后的推送命令
 git push origin master
+
+取回远程主机的更新以后，可以在它的基础上，使用git checkout命令创建一个新的分支。
+$ git checkout -b newBrach origin/master
+上面命令表示，在origin/master的基础上，创建一个新分支。
+此外，也可以使用git merge命令或者git rebase命令，在本地分支上合并远程分支。
+$ git merge origin/master
+# 或者
+$ git rebase origin/master
+上面命令表示在当前分支上，合并origin/master。
